@@ -1,0 +1,48 @@
+<!-- Dynamically setting the tailwind class
+https://github.com/tailwindlabs/tailwindcss/discussions/7084
+https://angular.io/api/common/NgClass
+-->
+
+<div [ngClass]="{'bg-white': showHideProperty === false}" class="flex flex-col md:flex-row md:items-center md:justify-between md:pr-4 fixed top-0 w-full  md:bg-transparent">
+
+    <!-- bg-red-400
+         bg-indigo-400 -->
+    <div class="flex flex-row justify-between p-4 items-center md:bg-transparent">
+        
+        <div class=" flex flex-row justify-start h-12 cursor-pointer font-megrim font-black text-lg ">
+           
+            <div class="animate-bounce bg-indigo-400 text-white p-0 w-14 h-14 ring-1 ring-slate-900/5 shadow-lg rounded-full flex items-center justify-center ">
+                < S >
+            </div>
+            <span class="self-center">ANUJA.DEV</span>
+
+        </div>
+
+        <div class="md:hidden cursor-pointer" (click)="showHide(!showHideProperty)">
+
+              <div *ngIf="showHideProperty; else elseBlock">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </div>
+              <ng-template #elseBlock>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  
+              </ng-template>
+        </div>
+    </div>
+
+
+    <div  [ngClass]="{'hidden md:block': showHideProperty === true}" class="h-screen md:h-auto md:bg-transparent">
+        <div class="flex flex-col uppercase text-center divide-y divide-slate-400/25 md:divide-none p-0 md:flex-row">
+            <div class=" cursor-pointer p-4 underline">About</div>
+            <div class=" cursor-pointer p-4 ">Projects</div>
+            <div class=" cursor-pointer p-4 ">Experance</div>
+            <div class=" cursor-pointer p-4 ">Education</div>
+            <div class=" cursor-pointer p-4 ">Contact</div>
+        </div>
+    </div>
+
+</div>
