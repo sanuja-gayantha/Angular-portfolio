@@ -9,10 +9,8 @@ module.exports = {
       fontFamily: { 
         'megrim': ['Megrim','system-ui','sans-serif'],
         'fahkwang': ['Fahkwang','system-ui','sans-serif'] 
-    }, 
-      fontWeight: {
-        megrimbold: '1900',
-      }
+    },
+    
     },
     
   },
