@@ -1,62 +1,44 @@
-<!-- <h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1> -->
 
 <app-nav-bar></app-nav-bar>
 
-<main>
-  <div class="content">
-    <section class="section">
-      <div class="text">
-        <!-- <h3>Lorem Ipsum</h3>
-        <p>beatae esse velit laudantium nam eligendi possimus</p> -->
+<div class="pages-wrapper h-screen overflow-hidden">
+  <div class="pages-container">
+
+    <div #page class="section-wrapper">
+      <div class="section-container">
         <app-hero></app-hero>
       </div>
-    </section>
-    <section class="section">
-      <div class="text">
-        <!-- <h3>Temporibus nesciunt</h3>
-        <p>Rem quos aliquid tempora dolor temporibus nesciunt</p> -->
+    </div>
+
+    <div #page class="section-wrapper">
+      <div class="section-container">
         <app-about></app-about>
       </div>
-    </section>
-    <section class="section">
-      <div class="text">
-        <!-- <h3>Rem quos aliquid</h3>
-        <p>Rem quos aliquid tempora dolor temporibus nesciunt</p> -->
+    </div>
+
+    <div #page class="section-wrapper">
+      <div class="section-container">
         <app-projects></app-projects>
       </div>
-    </section>
-    <section class="section">
-      <div class="text">
-        <!-- <h3>Quam hic dicta</h3>
-        <p>Rem quos aliquid tempora dolor temporibus nesciunt</p> -->
+    </div>
 
+    <div #page class="section-wrapper">
+      <div class="section-container">
         <app-project-item></app-project-item>
       </div>
-    </section>
-    <section class="section">
-      <div class="text">
-        <!-- <h3>Quam hic dicta</h3>
-        <p>Rem quos aliquid tempora dolor temporibus nesciunt</p> -->
+    </div>
 
+    <div #page class="section-wrapper">
+      <div class="section-container">
         <app-contact></app-contact>
       </div>
-    </section>
-
-
+    </div>
   </div>
 
 
   <div class="nav">
-    <button class="prev"></button>
-    <button class="next"></button>
+    <button #prev (click)="clickPrev()"></button>
+    <button #next (click)="clickNext()"></button>
   </div>
-</main>
 
-  <!-- <app-hero class="page-content"></app-hero>
-  <app-about class="page-content"></app-about>
-  <app-projects class="page-content"></app-projects>
-  <app-contact class="page-content"></app-contact> -->
-
-
+</div>
