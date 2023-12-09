@@ -18,6 +18,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
+import { BackgroundAnimeComponent } from './background-anime/background-anime.component';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,8 @@ import { ProjectItemComponent } from './project-item/project-item.component';
     AboutComponent,
     ProjectsComponent,
     ContactComponent,
-    ProjectItemComponent
+    ProjectItemComponent,
+    BackgroundAnimeComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -78,7 +80,7 @@ export class AppComponent implements OnInit ,AfterViewInit {
 
   clickNext() {
     // console.log(this.index)
-    if (this.index > 3) return;
+    if (this.index > 4) return;
     this.togglePageContent(this.index, 'hide');
     this.index+=1;
     this.pages.forEach((page, i) => {
