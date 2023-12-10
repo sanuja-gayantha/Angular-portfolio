@@ -8,8 +8,7 @@
     --glitch-duration: 3s;
     --glitch-color: black;
     --glitch-font-family: "Megrim", sans-serif;
-    --glitch-color-before: red;
-    --glitch-color-after: blue;
+    --glitch-color-before: blue;
   }
 
   .glitch-wrapper {
@@ -41,21 +40,10 @@
   }
 
   .glitch > span::before {
-    content: "FRONT-END DEVELOPER";
+    content: attr(data-text);
     position: absolute;
     color: var(--glitch-color-before);
-    left: -3px;
-    opacity: 1;
-    z-index: -1;
-    /* display: flex;
-    width: max-content; */
-  }
-
-  .glitch > span::before {
-    content: "FRONT-END DEVELOPER";
-    position: absolute;
-    color: var(--glitch-color-after);
-    left: -2px;
+    left: -1px;
     opacity: 1;
     z-index: -1;
     /* display: flex;

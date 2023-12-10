@@ -45,7 +45,7 @@ export class AppComponent implements OnInit ,AfterViewInit {
 
   index: number = 0;
   idlePeriod = 100;
-  animationDuration = 500;
+  animationDuration = 800;
   lastAnimation = 0;
 
   constructor(){}
@@ -80,7 +80,7 @@ export class AppComponent implements OnInit ,AfterViewInit {
 
   clickNext() {
     // console.log(this.index)
-    if (this.index > 4) return;
+    if (this.index > 6) return;
     this.togglePageContent(this.index, 'hide');
     this.index+=1;
     this.pages.forEach((page, i) => {

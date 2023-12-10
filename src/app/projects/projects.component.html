@@ -1,11 +1,31 @@
-<section class="about  flex flex-col lg:flex-row h-screen">
-    <div class=" container mx-auto flex p-4 flex-col ">
-
-        <p class="basis-1/3  capitalize font-megrim text-5xl lg:text-6xl">projects</p>
-
-        <div  class="basis-2/3 flex flex-col">
-            <span class="" *ngFor="let project of ['Car Rental', 'Coindom', 'Gymate', 'Ecommerce']">{{project}}</span>
-        </div>
-        
+<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-light">
+  <div class="container mx-auto p-4 flex flex-col h-screen justify-center md:gap-16">
+    
+    <div
+      class="capitalize font-megrim font-black text-5xl text-center lg:text-6xl py-16">
+      <div class="glitch">
+        <span [attr.data-text]="'Projects'" class="tracking-wide w-max pb-2" *ngFor="let number of [0, 1, 2, 3, 4]">Projects</span>
+      </div>
     </div>
+
+    <div class="flex flex-col">
+      <div class="flex flex-col gap-5 items-center text-sm md:text-base" >
+        <span
+        class="cursor-pointer"
+          *ngFor="
+            let project of [
+              'Car Rental (Angular, Tailwind CSS)',
+              'Coindom (Angular, Tailwind CSS)',
+              'Gymate (Angular, Tailwind CSS)',
+              'Ecommerce (Angular, Tailwind CSS)',
+              'Easybank landing page ( HTML, SASS, JavaScript)',
+              'Unsplash photo app (React, SCSS)',
+              'See more...'
+            ]
+          "
+          >{{ project }}</span
+        >
+      </div>
+    </div>
+  </div>
 </section>

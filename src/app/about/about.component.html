@@ -1,17 +1,22 @@
-<section class="about flex flex-col lg:flex-row h-screen">
-    <div class="container mx-auto p-4 flex flex-col  h-screen justify-center">
+<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-light">
+    <div class="container mx-auto p-4 flex flex-col  h-screen  justify-center">
         
-        <p class=" capitalize font-megrim text-5xl text-center lg:text-6xl p-4">about</p>
+        <div class="capitalize font-megrim font-black text-5xl text-center lg:text-6xl py-16">
+                <div class="glitch ">
+                    <span [attr.data-text] ='"About"' class="tracking-wide w-max" *ngFor="let number of [0,1,2,3,4]">About</span>
+                </div>
+        </div>
 
-        <div class=" flex flex-col lg:flex-row lg:p-4">
+
+        <div class="flex flex-col lg:flex-row lg:p-4 lg:my-auto">
 
             <app-image class="lg:basis-1/2 flex " [imgUrl]="imgUrl"></app-image>
 
-            <div class="lg:basis-1/2  flex flex-col text-sm pt-8 tracking-wide">
+            <div class="lg:basis-1/2  flex flex-col text-sm md:text-base pt-8 tracking-wide">
 
-                <p class="lg:pr-36"> I describe myself as a self-learning, <span>passionate developer</span> who loves coding and designing. Coding has been my passion since the days when I started working with computers.</p>
+                <p class="lg:pr-32"> I describe myself as a self-learning, <span>passionate developer</span> who loves coding and designing. Coding has been my passion since the days when I started working with computers.</p>
                 &nbsp;
-                <p class="lg:pr-36">From there, my fascination with technology led me to delve deeper into the intricate world of software development.</p>
+                <p class="lg:pr-32">From there, my fascination with technology led me to delve deeper into the intricate world of software development.</p>
                 &nbsp;
                 <span class="uppercase">Tech stack : </span>
                 &nbsp;
