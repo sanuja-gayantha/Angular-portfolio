@@ -1,32 +1,27 @@
-<!-- <section class="about  flex flex-col lg:flex-row h-screen">
-    <div class=" container mx-auto flex p-4 flex-col ">
-
-        <p class="basis-1/3  capitalize font-megrim text-5xl lg:text-6xl">contact</p>
-
-        <div  class="basis-2/3 flex flex-col">
-            <div class="">
-                <a href="mailto:rpsgayantha@gmail.com"><img src="" alt="" srcset=""></a>
-            </div>
-        </div>
-        
-    </div>
-</section>
- -->
-
- <section class="flex flex-col lg:flex-row h-screen lg:px-32 font-light">
-    <div class="container mx-auto p-4 flex flex-col h-screen justify-center">
-      
-      <div
-        class="capitalize font-megrim font-black text-5xl text-center lg:text-6xl py-16">
-        <div class="glitch">
-          <span [attr.data-text]="'Contact'" class="tracking-wide w-max" *ngFor="let number of [0, 1, 2, 3, 4]">Contact</span>
-        </div>
+<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-light w-screen">
+  <div class="container mx-auto p-4 flex flex-col h-screen justify-evenly md:gap-16 ">
+    
+    <div
+      class="capitalize font-megrim font-black text-5xl text-center lg:text-6xl py-16 ">
+      <div class="glitch">
+        <span [attr.data-text]="'Contact'" class="tracking-wide w-max pb-2" *ngFor="let number of [0, 1, 2, 3, 4]">Contact</span>
       </div>
-  
-      <div class="flex flex-col lg:my-auto">
-        
-      </div> 
-
     </div>
-  </section>
+
+    <div class="flex flex-col items-center justify-center  gap-6">
+      <!-- <div class="text-3xl">Hit me up! </div> -->
+
+        <a class="flex flex-row items-center gap-4" href="mailto:rpsgayantha@gmail.com"><img class="h-14 w-14 md:w-32 md:h-32" src="../../assets/images/email-files-letter-svgrepo-com.svg" alt="" srcset=""><span>rpsgayantha{{'@'}}gmail.com</span></a>
+
+        <a class="flex flex-row items-center gap-4" href="https://www.linkedin.com/in/sanuja-gayantha-630115201/"><img class="h-10 w-10 md:w-24 md:h-24" src="../../assets/images/linkedin.svg" alt="" srcset=""><span>Sanuja Gayantha</span></a>
+    </div>
+
+
+  <footer class="flex mx-auto text-xs flex-wrap gap-2 justify-center">
+    <span>Made with</span> <img class="h-4 w-4 flex flex-row " src="../../assets/images/heart.svg"> Cospanyright © {{Year}}. <span>All rights are reserved</span>
+  </footer>
+
+</div>
+</section>
+
   

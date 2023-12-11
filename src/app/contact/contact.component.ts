@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+  Year: number = new Date().getFullYear();
 }
