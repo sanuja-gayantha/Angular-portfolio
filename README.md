@@ -1,7 +1,3 @@
-git remote add origin https://github.com/sanuja-gayantha/Angular-portfolio.git
-git branch -M main
-git push -u origin main
+#Check My portfolio
 
-Megrim
-1 style
-Daniel Johnson
+https://sanuja-gayantha-dev.netlify.app/
