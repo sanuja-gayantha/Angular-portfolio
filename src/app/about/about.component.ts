@@ -15,6 +15,6 @@ export class AboutComponent {
   imgUrl: ImgUrl = {
     url_link: '../../assets/images/me.webp',
     alt_text: 'me.webp',
-    text:'# Sanuja  # Developer'
+    text:'# SANUJA # DEVELOPER'
   }
 }

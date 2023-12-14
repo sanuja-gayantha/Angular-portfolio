@@ -15,6 +15,6 @@ export class ProjectItemComponent {
   imgUrl: ImgUrl = {
     url_link: '../../assets/images/car-rental.png',
     alt_text: 'me.webp',
-    text:'# Sanuja  # Developer'
+    text:'LIVE DEMO'
   }
 }
