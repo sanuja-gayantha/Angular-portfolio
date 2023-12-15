@@ -21,6 +21,9 @@ module.exports = {
         80: "80%",
         90: "90%",
       },
+      opacity: {
+        9:"0.09"
+      },
     },
   },
   plugins: [],
