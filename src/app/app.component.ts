@@ -91,8 +91,7 @@ export class AppComponent implements OnInit ,AfterViewInit {
     });
   }
 
-  @HostListener('wheel', ['$event'])
-  onMouseWheel(event: WheelEvent) {
+  @HostListener('wheel', ['$event']) onMouseWheel(event: WheelEvent) {
     let delta = 0;
     if (event['deltaY']) {
       delta = event.deltaY;
