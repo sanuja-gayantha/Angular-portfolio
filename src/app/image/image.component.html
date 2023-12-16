@@ -10,7 +10,7 @@
     />
     <span
       *ngIf="imgUrl.text.toString() === '# SANUJA # DEVELOPER'; else elseBlock"
-      class="text-xs text-center pb-2 font-black"
+      class="text-xs text-center pb-2 font-bold"
       >{{ imgUrl.text }}
     </span>
     <ng-template #elseBlock>
@@ -22,7 +22,7 @@
               class="w-8 h-8 cursor-pointer" /></a
         ></span>
         <button
-          class="flex flex-row text-xs text-center border-2 border-black p-4 m-2 self-center hover:text-white font-black"
+          class="flex flex-row text-xs text-center border-2 border-black p-4 m-2 self-center hover:text-white font-bold"
         >
           {{ imgUrl.text }}
         </button>
