@@ -13,9 +13,9 @@ import { ImgUrl } from '../img-url';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
-  imgUrl: ImgUrl = {
-    url_link: '../../assets/images/me.webp',
-    alt_text: 'me.webp',
-    text:'# Sanuja  # Developer'
-  }
+  // imgUrl: ImgUrl = {
+  //   url_link: '../../assets/images/me.webp',
+  //   alt_text: 'me.webp',
+  //   text:'# Sanuja  # Developer'
+  // }
 }
