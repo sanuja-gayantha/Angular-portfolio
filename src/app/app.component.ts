@@ -19,6 +19,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectItemComponent } from './project-item/project-item.component';
 import { BackgroundAnimeComponent } from './background-anime/background-anime.component';
+import { Projects } from './projects';
+import { ProjectsService } from './projects.service';
 
 @Component({
   selector: 'app-root',
@@ -39,18 +41,24 @@ import { BackgroundAnimeComponent } from './background-anime/background-anime.co
 })
 export class AppComponent implements OnInit ,AfterViewInit {
   // title = 'angular-portfolio';
+
+  projectItemsList!:Projects[];
+
   @ViewChildren('page') pages!: QueryList<ElementRef>;
   @ViewChild('prev') prev!: ElementRef;
   @ViewChild('next') next!: ElementRef;
+  
 
   index: number = 0;
   idlePeriod = 100;
   animationDuration = 800;
   lastAnimation = 0;
 
-  constructor(){}
+  constructor(private projectItems:ProjectsService){}
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.projectItemsList = this.projectItems.getProjectItems(); 
+  }
 
   togglePageContent(index: number, state: string) {
     if (state === 'show') {

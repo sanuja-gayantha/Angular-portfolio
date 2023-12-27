@@ -1,31 +1,24 @@
-<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-bold">
+<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-medium">
   <div class="container mx-auto p-4 flex flex-col h-screen justify-center md:gap-16">
-    
-    <div
-      class="capitalize font-megrim font-bold text-5xl text-center lg:text-6xl py-16">
+
+    <div class="capitalize font-megrim font-medium text-5xl text-center lg:text-6xl py-16">
       <div class="glitch">
-        <span [attr.data-text]="'Projects'" class="tracking-wide w-max pb-2" *ngFor="let number of [0, 1, 2, 3, 4]">Projects</span>
+        <span [attr.data-text]="'Projects'" class="tracking-wide w-max pb-2"
+          *ngFor="let number of [0, 1, 2, 3, 4]">Projects</span>
       </div>
     </div>
 
     <div class="flex flex-col">
-      <div class="flex flex-col gap-5 items-center text-sm md:text-base" >
-        <span
-        class="cursor-pointer"
-          *ngFor="
-            let project of [
-              'Ecommerce (Angular, Tailwind CSS)',
-              'Snacks brand (Angular, Tailwind CSS)',
-              'Electric scooters (Angular, Tailwind CSS)',
-              'IP tracker (Angular, Tailwind CSS)',
-              'Moroccan shop (React, SCSS)',
-              'Unsplash photo app (React, SCSS)',
-              'Easybank landing page ( HTML, SASS, JavaScript)',
-              'See more...'
-            ]
-          "
-          >{{ project }}</span
-        >
+      <div class="flex flex-col gap-5 items-center">
+
+        <a *ngFor="let projectItem of projectItems" href={{projectItem.githubUrl}} target="_blank" rel="noopener noreferrer" class="cursor-pointer">
+          <span>
+            {{projectItem.projectName}} ( {{ projectItem.techStack[0].stackName }}, {{ projectItem.techStack[1].stackName }} )
+          </span>
+        </a>
+        <a href="https://github.com/sanuja-gayantha" target="_blank" rel="noopener noreferrer">See More...</a>
+
+
       </div>
     </div>
   </div>

@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        megrim: ["Megrim", "system-ui", "sans-serif"],
-        fahkwang: ["Fahkwang", "system-ui", "sans-serif"],
+        'outfit': ['"Outfit"', ...defaultTheme.fontFamily.sans],
+        'megrim': ['"Megrim"', ...defaultTheme.fontFamily.sans],
+        // 'fahkwang': ['"Fahkwang"', ...defaultTheme.fontFamily.sans],
       },
       grayscale: {
         10: "10%",
@@ -19,6 +20,11 @@ module.exports = {
       },
       opacity: {
         9:"0.09"
+      },
+      colors: {
+        'primary': '#54595F',
+        'primary-2': '#1f1437',
+        'secondery':'#dc3545',
       },
     },
   },

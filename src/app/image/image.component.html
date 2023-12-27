@@ -1,32 +1,25 @@
 <div class="img-wrapper flex mx-auto">
   <div
-    class="container shadow-2xl -rotate-2 border-8 border-slate-300 outline-dashed -outline-5 outline-slate-300 w-full h-full flex flex-col bg-white"
-  >
-    <img
-      class="lg:w-80 lg:h-80 h-60 w-60 object-cover pb-4"
-      src="{{ imgUrl.url_link }}"
-      alt="{{ imgUrl.alt_text }}"
-      srcset=""
-    />
-    <span
-      *ngIf="imgUrl.text.toString() === '# SANUJA # DEVELOPER'; else elseBlock"
-      class="text-xs text-center pb-2 font-bold"
-      >{{ imgUrl.text }}
-    </span>
-    <ng-template #elseBlock>
-      <div class="flex flex-row justify-center">
-        <span class="flex flex-row text-xs text-center m-2 self-center">
-          <a href="https://github.com/sanuja-gayantha" target="_blank"
-            ><img
-              src="../../assets/images/github.svg"
-              class="w-8 h-8 cursor-pointer" /></a
-        ></span>
-        <button
-          class="flex flex-row text-xs text-center border-2 border-black p-4 m-2 self-center hover:text-white font-bold"
-        >
-          {{ imgUrl.text }}
-        </button>
-      </div>
-    </ng-template>
+    class="container shadow-2xl -rotate-2 border-8 border-slate-300 outline-dashed -outline-5 outline-slate-300 w-full h-full flex flex-col bg-white">
+    <div class="image lg:w-80 lg:h-80 h-60 w-60 overflow-hidden">
+      <img class="lg:w-full lg:h-auto object-cover pb-4" src="{{ projectItem.imageUrl }}"
+        alt="{{ projectItem.projectName }}" srcset="" style="
+          transform: translateY(0%);
+          transition: transform 10s ease-in-out 0s;
+        " />
+    </div>
+
+    <div class="flex flex-row justify-center">
+      <span class="flex flex-row text-xs text-center m-2 self-center">
+        <a href="{{ projectItem.githubUrl }}" target="_blank"><img src="../../assets/images/github.svg"
+            class="w-8 h-8 cursor-pointer" /></a></span>
+      <button
+        class="flex flex-row text-xs text-center border-2 border-black p-4 m-2 self-center hover:text-white font-bold">
+        <a href="{{ projectItem.demoUrl }}" target="_blank">
+        LIVE DEMO
+        </a>
+        
+      </button>
+    </div>
   </div>
 </div>

@@ -1,20 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageComponent } from '../image/image.component';
-import { ImgUrl } from '../img-url';
+import { Projects } from '../projects';
+import { IconComponent } from '../icon/icon.component';
 
 
 @Component({
   selector: 'app-project-item',
   standalone: true,
-  imports: [CommonModule, ImageComponent],
+  imports: [CommonModule, ImageComponent, IconComponent],
   templateUrl: './project-item.component.html',
   styleUrl: './project-item.component.css'
 })
 export class ProjectItemComponent {
-  imgUrl: ImgUrl = {
-    url_link: '../../assets/images/car-rental.png',
-    alt_text: 'me.webp',
-    text:'LIVE DEMO'
-  }
+
+  @Input()projectItem!:Projects; 
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ImgUrl } from '../img-url';
+import { Projects } from '../projects';
 
 @Component({
   selector: 'app-image',
@@ -11,7 +12,7 @@ import { ImgUrl } from '../img-url';
   styleUrl: './image.component.css'
 })
 export class ImageComponent implements OnInit{
-  @Input() imgUrl!:ImgUrl;
+  @Input() projectItem!:Projects;
 
   ngOnInit(): void {
 
