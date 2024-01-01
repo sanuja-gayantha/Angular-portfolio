@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { FormsModule } from '@angular/forms';
+import { MessageModel } from '../message-model';
 
 
 @Component({
@@ -18,6 +19,12 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactComponent {
   Year: number = new Date().getFullYear();
+
+  contacts:MessageModel={
+    user_name:'',
+    user_email:'',
+    message:''
+  }
 
   public sendEmail(e: Event) {
     // console.log(e)
