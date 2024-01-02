@@ -1,5 +1,5 @@
-<section class="flex flex-col lg:flex-row h-screen lg:px-32 font-medium w-screen">
-  <div class="container mx-auto p-4 flex flex-col h-screen justify-evenly md:gap-16">
+<section class="flex flex-col lg:flex-row h-screen font-medium w-screen relative">
+  <div class="container mx-auto p-4 flex flex-col h-screen justify-evenly md:gap-16 ">
     
     <div
       class="capitalize font-megrim font-medium text-5xl text-center lg:text-6xl mt-16">
@@ -50,12 +50,15 @@
       focus:invalid:border-pink-500 focus:invalid:ring-pink-500" name="message"></textarea>
 
       <button *ngIf="contacts.user_name && contacts.user_email && contacts.message" type="submit" value="Send" class="text-center border-2 border-primary  p-4  hover:text-white lg:w-[200px] z-50 ">Send</button>
-      <footer class="flex mx-auto text-xs flex-wrap gap-2 justify-center mt-2">
-        <span>Copyright © {{Year}}. All rights are reserved</span>
-      </footer>
+    
     </form>
 
   </div>
 
+
+
 </div>
+<footer class="flex mx-auto text-xs flex-wrap gap-2 justify-center mt-2 absolute bottom-5 p-4 w-screen">
+  <span>Copyright © {{Year}}. All rights are reserved.</span>
+</footer>
 </section>
