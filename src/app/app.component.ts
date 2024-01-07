@@ -88,7 +88,7 @@ export class AppComponent implements OnInit ,AfterViewInit {
 
   clickNext() {
     // console.log(this.index)
-    if (this.index > 5) return;
+    if (this.index > 6) return;
     this.togglePageContent(this.index, 'hide');
     this.index+=1;
     this.pages.forEach((page, i) => {

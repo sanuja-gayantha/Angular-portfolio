@@ -13,7 +13,7 @@ export class ProjectsService {
       imageUrl: 'https://i.ibb.co/Tt9KRvZ/Snacks-brand.webp',
       githubUrl: 'https://github.com/sanuja-gayantha/Snacks-brand',
       demoUrl: 'https://snacks-brand.netlify.app/',
-      desc1: 'Did you know that the fortune cookie, often associated with Chinese cuisine, actually originated in California, not in China?',
+      desc1: 'Did you know that the fortune cookie 🍪, often associated with Chinese cuisine, actually originated in California, not in China?',
       desc2: 'This is a small business website that sells snacks and cookies. customers can order their favorite flavors online.',
       techStack: [
         {
@@ -67,8 +67,32 @@ export class ProjectsService {
       imageUrl: 'https://i.ibb.co/pv4G2Xj/Electric-cooters.webp',
       githubUrl: 'https://github.com/sanuja-gayantha/Electric-scooters',
       demoUrl: 'https://electric-scooters.netlify.app/',
-      desc1: 'Did you know that the first patent for an electric bicycle, a precursor to modern electric scooters, was filed in the late 19th century by Hosea W. Libbey?',
+      desc1: 'Did you know that the first patent for an electric bicycle, a precursor to modern electric scooters, was filed in the late 19th century by Hosea W. Libbey? 🛴',
       desc2: 'This digital storefront showcases an extensive range of cutting-edge electric scooters, along with an assortment of top-tier accessories meticulously curated for an enhanced riding experience.',
+      techStack: [
+        {
+          stackName: 'Angular',
+          stackUrl: '../../assets/images/angular.svg'
+        },
+        {
+          stackName: 'Typescript',
+          stackUrl: '../../assets/images/typescript.svg'
+        },
+        {
+          stackName: 'Tailwindcss',
+          stackUrl: '../../assets/images/tailwindcss.svg'
+        }
+      ]
+    },
+
+    {
+      projectID: 4,
+      projectName: 'Ip tracker',
+      imageUrl: '',
+      githubUrl: 'https://github.com/sanuja-gayantha/IP-tracker',
+      demoUrl: 'https://any-ip-address-tracker.netlify.app/',
+      desc1: 'Did you know that the concept of tracking IP addresses originated in the early 1970s with the development of the Transmission Control Protocol/Internet Protocol (TCP/IP), allowing for the identification and tracing of devices connected to the internet?',
+      desc2: 'This is an IP address tracking app 🌍📌 that utilizes two separate APIs to track the location of a given IP address.',
       techStack: [
         {
           stackName: 'Angular',
@@ -86,7 +110,7 @@ export class ProjectsService {
     },
     
     {
-      projectID: 4,
+      projectID: 5,
       projectName: 'Moroccan shop',
       githubUrl: 'https://github.com/sanuja-gayantha/Moroccan-shop-frontend',
       techStack: [
@@ -102,7 +126,7 @@ export class ProjectsService {
     },
 
     {
-      projectID: 5,
+      projectID: 6,
       projectName: 'Unsplash photo app',
       githubUrl: 'https://github.com/sanuja-gayantha/unsplash-photo-app',
       techStack: [
@@ -118,7 +142,7 @@ export class ProjectsService {
     },
 
     {
-      projectID: 6,
+      projectID: 7,
       projectName: 'Easybank landing page',
       githubUrl: 'https://github.com/sanuja-gayantha/Easybank-landing-page',
       techStack: [
