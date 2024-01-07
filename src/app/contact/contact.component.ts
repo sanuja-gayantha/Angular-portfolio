@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { FormsModule } from '@angular/forms';
-import { MessageModel } from '../message-model';
+import { FormsModule, NgForm } from '@angular/forms';
+import { Contacts } from '../contacts';
+import { Message } from '../message';
 
 
 @Component({
@@ -17,24 +19,40 @@ import { MessageModel } from '../message-model';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent {
-  Year: number = new Date().getFullYear();
+export class ContactComponent{
 
-  contacts:MessageModel={
+  Year: number = new Date().getFullYear();
+  contacts:Contacts={
     user_name:'',
     user_email:'',
     message:''
   }
+  errors!:Message | null;
 
-  public sendEmail(e: Event) {
-    // console.log(e)
+  private YOUR_SERVICE_ID:string='service_yxrqmok';
+  private YOUR_TEMPLATE_ID:string='template_yhhuqvc'
+  private YOUR_PUBLIC_KEY:string='user_1e1EwwXdIiDGQUSvUNGbg'
+
+  async messageDelay(message:Message) {
+    this.errors=message;
+    setTimeout(()=>{
+      this.errors=null;
+    }, 8000);
+  } 
+
+  public sendEmail(e: Event, contactForm:NgForm) {
+
     e.preventDefault();
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_PUBLIC_KEY')
+    emailjs.sendForm(this.YOUR_SERVICE_ID, this.YOUR_TEMPLATE_ID, e.target as HTMLFormElement, this.YOUR_PUBLIC_KEY)
       .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
+        this.messageDelay({id:1, message:'Message sent successfully'})
+        contactForm.reset();
+
       }, (error) => {
-        console.log(error.text);
+        this.messageDelay({id:2, message:error.text})
       });
   }
+  
+
 
 }

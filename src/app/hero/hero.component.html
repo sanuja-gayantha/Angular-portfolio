@@ -1,4 +1,4 @@
-<section class="hero flex flex-col h-screen w-screen justify-center relative">
+<section class="hero flex flex-col h-screen w-screen justify-center relative  max-w-[1366px] mx-auto">
   <!-- bg-rose-400 -->
 
   <div class="glitch-wrapper flex flex-col text-6xl md:text-8xl justify-center">
@@ -18,10 +18,10 @@
   <div class="flex gap-5 justify-center items-center pt-12 md:pt-10 z-50">
     <!-- <app-icon *ngFor="let social of socialList" [stack]="social"></app-icon> -->
     
-    <a *ngFor="let social of socialList" href={{social.link}} target="_blank" class="image-container block rounded-full w-8 h-8 lg:w-12 lg:h-12 p-1 border-2 border-primary hover:rotate-center2">
+    <a *ngFor="let social of socialList" href={{social.link}} target="_blank" class="image-container block rounded-full w-12 h-12 p-1 border-2 border-primary-2 hover:rotate-center2">
       <img class="h-full w-full rounded-md" src={{social.stackUrl}} alt={{social.stackName}} srcset="">
     </a>
-    <button class="text-center border-2 border-black p-4 m-2 self-center hover:text-white lg:w-[200px]">Contact Me</button>
+    <button class="text-center border-2 border-primary-2 p-4 m-2 self-center hover:text-white lg:w-[200px]">Contact Me</button>
   </div>
 
 
